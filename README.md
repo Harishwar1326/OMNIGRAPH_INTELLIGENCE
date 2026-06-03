@@ -17,7 +17,7 @@ AI-powered Graph RAG platform that converts uploaded documents into an interacti
 - **Docker** (for Neo4j)
 - **OpenAI API key** (optional — mock AI works for demo)
 
-## Quick Start (6-Hour Hackathon Demo)
+## Quick Start  
 
 ### 1. Start Neo4j
 
@@ -114,6 +114,4 @@ See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md), [docs/DATABASE_MODEL.md](docs/
 | Chat returns generic answer | Upload demo text first to populate graph |
 | CORS errors | Use Vite dev server (proxies `/api` to backend) |
 
-## License
-
-MIT — Hackathon MVP
+ 
