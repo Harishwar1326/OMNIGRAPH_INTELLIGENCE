@@ -1,0 +1,33 @@
+{
+  "name": "omnigraph-backend",
+  "version": "1.0.0",
+  "description": "OMNIGRAPH Intelligence Platform API",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "prestart": "npm run stop",
+    "start": "node src/server.js",
+    "predev": "npm run stop",
+    "dev": "node --watch src/server.js",
+    "stop": "node scripts/stop-server.js",
+    "test:neo4j": "node scripts/test-neo4j.js"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.19.3",
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "groq-sdk": "^1.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "multer": "^1.4.5-lts.1",
+    "neo4j-driver": "^5.25.0",
+    "openai": "^4.67.0",
+    "pdf-parse": "^1.1.1",
+    "uuid": "^10.0.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "prisma": "^6.19.3"
+  }
+}
