@@ -57,6 +57,7 @@ UI: http://localhost:5173
 3. **Graph Explorer** — interactive nodes & edges
 4. **AI Chat** → ask *"Who partnered with OpenAI?"*
 5. **Discovery** — view hidden relationship suggestions
+6. **Simulation** - predicts the futuristic answers
 
 ## API Endpoints
 
