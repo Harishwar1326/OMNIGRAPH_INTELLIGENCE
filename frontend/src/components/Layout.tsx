@@ -122,12 +122,16 @@ export default function Layout() {
           </div>
 
           <div className="flex items-center gap-3 px-4 py-2">
-            <div className={`h-8 w-8 rounded-full flex items-center justify-center ${isDark ? 'bg-white/10 text-slate-400' : 'bg-slate-200 text-slate-600'}`}>
+            <div className={`h-8 w-8 rounded-full flex items-center justify-center ${isDark ? 'bg-indigo-500/20 text-indigo-400' : 'bg-indigo-100 text-indigo-600'} ring-1 ring-white/5`}>
                <UserIcon size={16} />
             </div>
             <div className="min-w-0">
-               <p className={`text-[10px] font-black uppercase tracking-widest truncate ${isDark ? 'text-white' : 'text-slate-900'}`}>Active User</p>
-               <p className="text-[8px] text-slate-500 uppercase tracking-tighter">Verified Protocol</p>
+               <p className={`text-[10px] font-black uppercase tracking-widest truncate ${isDark ? 'text-white' : 'text-slate-900'}`}>
+                 {JSON.parse(localStorage.getItem('user') || '{}').name || 'Active User'}
+               </p>
+               <p className="text-[8px] text-slate-500 uppercase tracking-tighter truncate">
+                 {JSON.parse(localStorage.getItem('user') || '{}').email || 'Verified Protocol'}
+               </p>
             </div>
           </div>
 

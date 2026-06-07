@@ -57,17 +57,24 @@ export async function deleteDocument(filename: string): Promise<void> {
 
 export async function login(credentials: any): Promise<any> {
   const { data } = await api.post('/auth/login', credentials);
-  if (data.token) localStorage.setItem('token', data.token);
+  if (data.token) {
+    localStorage.setItem('token', data.token);
+    localStorage.setItem('user', JSON.stringify(data.user));
+  }
   return data;
 }
 
 export async function register(userData: any): Promise<any> {
   const { data } = await api.post('/auth/register', userData);
-  if (data.token) localStorage.setItem('token', data.token);
+  if (data.token) {
+    localStorage.setItem('token', data.token);
+    localStorage.setItem('user', JSON.stringify(data.user));
+  }
   return data;
 }
 
 export function logout() {
   localStorage.removeItem('token');
+  localStorage.removeItem('user');
 }
 
