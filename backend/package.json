@@ -10,7 +10,8 @@
     "predev": "npm run stop",
     "dev": "node --watch src/server.js",
     "stop": "node scripts/stop-server.js",
-    "test:neo4j": "node scripts/test-neo4j.js"
+    "test:neo4j": "node scripts/test-neo4j.js",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@prisma/client": "^6.19.3",

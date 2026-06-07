@@ -7,8 +7,10 @@ import type {
   UploadResult,
 } from '../types';
 
+const API_URL = import.meta.env.VITE_API_URL || '';
+
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: API_URL.endsWith('/api') ? API_URL : `${API_URL}/api`,
   timeout: 120000,
 });
 
